@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# 🎨 Carousel Generator AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Công cụ tạo Carousel chuyên nghiệp từ nội dung Markdown, được tối ưu hóa cho LinkedIn, Instagram và các mạng xã hội.
 
-Currently, two official plugins are available:
+## 🚀 Tính năng chính
+- **Markdown to Design**: Tự động chuyển đổi nội dung văn bản thành các slide đẹp mắt.
+- **Tùy chỉnh linh hoạt**: Chỉnh sửa phông chữ, màu sắc, vị trí các khối nội dung trực tiếp trên giao diện.
+- **Xuất file hàng loạt**: Tải xuống toàn bộ carousel dưới dạng file `.zip` chứa các ảnh chất lượng cao.
+- **Hỗ trợ tiếng Việt**: Tích hợp các phông chữ Google Fonts phổ biến (Be Vietnam Pro, Roboto, ...).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Hướng dẫn cài đặt local
+1. Clone dự án:
+   ```bash
+   git clone https://github.com/maihung89/carousel-generator-ai-.git
+   ```
+2. Cài đặt dependencies:
+   ```bash
+   npm install
+   ```
+3. Chạy môi trường phát triển:
+   ```bash
+   npm run dev
+   ```
 
-## React Compiler
+## 🌐 Hướng dẫn chạy trên môi trường Website (GitHub Pages)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Để chạy dự án này trên website cá nhân của bạn thông qua GitHub Pages, hãy thực hiện các bước sau:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Đưa code lên GitHub
+Nếu bạn chưa đưa code lên, hãy chạy các lệnh sau trong terminal:
+```bash
+git add .
+git commit -m "Build: Fix deployment and build errors"
+git push origin main
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Cấu hình GitHub Actions
+Dự án đã có sẵn file `.github/workflows/deploy.yml`. Khi bạn `push` code lên nhánh `main`, GitHub sẽ tự động build và triển khai.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Bước quan trọng trong GitHub Settings:**
+1. Truy cập vào Repository của bạn trên GitHub.
+2. Chọn **Settings** > **Pages**.
+3. Tại phần **Build and deployment** > **Source**, hãy chọn **GitHub Actions**.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3. Truy cập Website
+Sau khi quá trình "Actions" hoàn tất (khoảng 1-2 phút), website của bạn sẽ có địa chỉ:
+`https://maihung89.github.io/carousel-generator-ai-/`
+
+---
+*Dự án được hỗ trợ bởi Antigravity (Advanced Agentic Coding).*

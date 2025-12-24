@@ -65,24 +65,24 @@ function App() {
     setIsExporting(true);
 
     try {
-      const { exportSlidesToZip } = await import("./utils/exportUtils");
+      // const { exportSlidesToZip } = await import("./utils/exportUtils");
 
       // We need a hidden way to render all slides. 
       // A simple trick: iterate through slides and wait for render.
       // But a better way is to pass a function that can target slide elements.
       // For simplicity in this demo, we'll use the visible canvas elements.
 
-      const getSlideElement = (index: number) => {
-        // We temporarily switch the slide to render it for html2canvas
-        // This is tricky in a single canvas setup. 
-        // Let's use a dedicated capture method.
-        return document.querySelector('.carousel-capture-area') as HTMLElement;
-      };
+      // const getSlideElement = (index: number) => {
+      //   // We temporarily switch the slide to render it for html2canvas
+      //   // This is tricky in a single canvas setup. 
+      //   // Let's use a dedicated capture method.
+      //   return document.querySelector('.carousel-capture-area') as HTMLElement;
+      // };
 
       // To capture all slides, we'll programmatically switch pages
       const originalIndex = currentIndex;
 
-      const images: { name: string, blob: Blob }[] = [];
+      // const images: { name: string, blob: Blob }[] = [];
       const JSZip = (await import("jszip")).default;
       const { saveAs } = await import("file-saver");
       const html2canvas = (await import("html2canvas")).default;

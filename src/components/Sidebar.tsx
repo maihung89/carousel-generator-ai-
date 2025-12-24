@@ -77,7 +77,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                         <X
                             size={18}
                             className="text-slate-500 hover:text-rose-400 cursor-pointer transition-colors"
-                            onClick={() => (document.activeElement as HTMLElement)?.blur() || (window as any).getSelection()?.removeAllRanges()}
+                            onClick={() => { (document.activeElement as HTMLElement)?.blur(); window.getSelection()?.removeAllRanges(); }}
                         />
                     </div>
                 </div>

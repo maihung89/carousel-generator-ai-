@@ -1,4 +1,4 @@
-import type { Slide, TextBlock } from "../types";
+import type { Slide } from "../types";
 
 export const parseMarkdown = (raw: string, backgroundUrl: string): Slide[] => {
     if (!raw.trim()) return [];
